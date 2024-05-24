@@ -1,6 +1,4 @@
-# Creación de una Necesidad y Requerimientos para una Aplicación de Gestión de Tareas
-
-## Descripción del Proyecto
+## Descripción del Proyecto (Necesidad)
 
 Desarrollar una aplicación de gestión de tareas que permita a los usuarios crear, editar, eliminar y visualizar tareas. La aplicación debe proporcionar funcionalidades de gestión de proyectos, asignación de tareas a diferentes usuarios, seguimiento del progreso de las tareas, y notificaciones de vencimiento. 
 
