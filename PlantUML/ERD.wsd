@@ -1,0 +1,44 @@
+@startuml ERD
+!define TABLE(name,desc) class name as "desc" << (T,#FFAAAA) >>
+!define FK(srcField, srcTable, tgtField, tgtTable, label) srcTable::srcField "1" -down- "N" tgtTable::tgtField : label
+
+TABLE(Usuarios, "Usuarios") {
+  +id_usuario : int
+  nombre : varchar
+  correo_electronico : varchar
+  contraseña : varchar
+}
+
+TABLE(Proyectos, "Proyectos") {
+  +id_proyecto : int
+  nombre : varchar
+  descripcion : text
+  id_usuario : int
+}
+
+TABLE(Tareas, "Tareas") {
+  +id_tarea : int
+  titulo : varchar
+  descripcion : text
+  fecha_vencimiento : date
+  prioridad : int
+  estado : varchar
+  id_usuario_asignado : int
+  id_proyecto : int
+}
+
+TABLE(Notificaciones, "Notificaciones") {
+  +id_notificacion : int
+  mensaje : text
+  fecha_envio : date
+  id_usuario : int
+  id_tarea : int
+}
+
+Usuarios "1" -down-> "N" Proyectos : id_usuario
+Proyectos "1" -down-> "N" Tareas : id_proyecto
+Usuarios "1" -down-> "N" Tareas : id_usuario_asignado
+Tareas "1" -down-> "N" Notificaciones : id_tarea
+Usuarios "1" -down-> "N" Notificaciones : id_usuario
+
+@enduml

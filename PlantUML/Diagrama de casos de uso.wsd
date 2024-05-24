@@ -1,0 +1,18 @@
+@startuml casos de uso
+left to right direction
+actor Usuario
+rectangle "Gestión de Tareas" {
+    Usuario --> (Registrar Usuario)
+    Usuario --> (Iniciar Sesión)
+    Usuario --> (Restablecer Contraseña)
+    Usuario --> (Crear Proyecto)
+    Usuario --> (Asignar Tarea a Proyecto)
+    Usuario --> (Crear Tarea)
+    Usuario --> (Asignar Tarea a Usuario)
+    Usuario --> (Marcar Tarea como Completada)
+    Usuario --> (Actualizar Estado de Tarea)
+    Usuario --> (Enviar Notificaciones)
+    Usuario --> (Ver Tareas de Usuario)
+    Usuario --> (Ver Proyectos de Usuario)
+}
+@enduml

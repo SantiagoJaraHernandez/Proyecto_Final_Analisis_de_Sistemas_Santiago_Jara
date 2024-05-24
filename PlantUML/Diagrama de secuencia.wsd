@@ -1,0 +1,12 @@
+@startuml secuencia
+participant Usuario
+participant Application
+participant User
+participant Task
+participant Notification
+
+User -> Application: CrearTarea()
+Application -> Task: Crear tarea
+Application -> Task: AsignarTareaAUsuario()
+Application -> Notification: NotificarAsignacion()
+@enduml

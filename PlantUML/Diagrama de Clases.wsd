@@ -1,0 +1,65 @@
+@startuml clases
+class Application {
+    - users: List<User>
+    - projects: List<Project>
+    - tasks: List<Task>
+    - notifications: List<Notification>
+    + registerUser()
+    + loginUser()
+    + resetPassword()
+    + createProject()
+    + assignTaskToProject()
+    + createTask()
+    + assignTaskToUser()
+    + markTaskAsCompleted()
+    + updateTaskStatus()
+    + sendNotifications()
+    + getUsersTasks()
+    + getUsersProjects()
+}
+
+class User {
+    - id: int
+    - name: string
+    - email: string
+    - password: string
+    + login(): bool
+    + resetPassword(): bool
+    + createTask(): Task
+}
+
+class Project {
+    - id: int
+    - name: string
+    - description: string
+    - user_id: int
+    + addTask(): Task
+    + assignTask(): void
+}
+
+class Task {
+    - id: int
+    - title: string
+    - description: string
+    - due_date: date
+    - priority: enum
+    - status: enum
+    - user_id: int
+    - project_id: int
+    + markAsCompleted(): void
+    + updateStatus(): void
+}
+
+class Notification {
+    - id: int
+    - message: string
+    - send_date: datetime
+    - user_id: int
+    - task_id: int
+}
+
+Application --> User : contains
+Application --> Project : contains
+Application --> Task : contains
+Application --> Notification : contains
+@enduml
