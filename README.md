@@ -87,13 +87,13 @@ Desarrollar una aplicación de gestión de tareas que permita a los usuarios cre
 ### Diagrama de Entidad-Relación (ERD)
 
 ![Diagrama-Entidad-Relación](/Imágenes/Diagramas/ERD.png)
-### Diagrama de Entidad-Relación (ERD)
+### Diagrama de Clases
 
 ![Diagrama de Clases](/Imágenes/Diagramas/clases.png)
-### Diagrama de Entidad-Relación (ERD)
+### Diagrama de Casos de Uso
 
 ![Diagrama de Casos de Uso](/Imágenes/Diagramas/casos%20de%20uso.png)
-### Diagrama de Entidad-Relación (ERD)
+### Diagrama de Secuencia
 
 ![Diagrama de Secuencia](/Imágenes/Diagramas/secuencia.png)
 # Gestión de Tareas - Tablas y Script SQL
